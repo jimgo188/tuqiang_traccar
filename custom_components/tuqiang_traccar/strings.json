@@ -1,0 +1,85 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "选择平台",
+        "description": "先选你的途强账号属于哪个站点。不确定就选「途强在线新版」。",
+        "data": {
+          "platform": "平台"
+        }
+      },
+      "auth": {
+        "title": "账号登录",
+        "description": "用你在途强网站上的账号密码登录，只用于读取定位，不会改动任何设置。",
+        "data": {
+          "username": "账号",
+          "password": "密码"
+        }
+      },
+      "device_select": {
+        "title": "选择设备",
+        "description": "勾选要转发到 Traccar 的设备。",
+        "data": {
+          "devices": "设备"
+        }
+      },
+      "traccar_config": {
+        "title": "Traccar 服务器",
+        "description": "填 Traccar 的客户端接入地址，例如 http://192.168.1.10:5055。要用接入端口 5055，不是网页的 8082。当前已选 {count} 台设备。",
+        "data": {
+          "traccar_url": "Traccar 地址（含端口）",
+          "device_prefix": "设备标识前缀（可选）",
+          "update_interval": "上报间隔（秒）",
+          "speed_unit": "速度单位（跟 Traccar 那边的设置一致）",
+          "heartbeat": "位置不变时补报（心跳，会多出重合的轨迹点）",
+          "send_battery": "上报电量和充电状态",
+          "send_attrs": "附带点火状态和电压",
+          "battery_field": "电量字段名（留空自动识别）"
+        }
+      },
+      "reauth_confirm": {
+        "title": "重新认证",
+        "description": "账号 {username} 登录失败，请输入新密码。",
+        "data": {
+          "password": "密码"
+        }
+      }
+    },
+    "error": {
+      "invalid_auth": "账号或密码不对",
+      "cannot_connect": "连不上途强，稍后再试",
+      "no_devices": "这个账号下没有设备",
+      "no_device_selected": "至少选一台设备",
+      "invalid_url": "地址要以 http:// 或 https:// 开头",
+      "cannot_connect_traccar": "这个地址没有响应，确认端口是 5055 且 HA 能访问",
+      "unknown": "出了点意外，看日志"
+    },
+    "abort": {
+      "already_configured": "这个账号和这台 Traccar 已经配过了",
+      "reauth_successful": "认证已更新"
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "选项",
+        "description": "改完自动重载。设备列表是实时从途强拉取的。",
+        "data": {
+          "devices": "设备",
+          "device_prefix": "设备标识前缀（可选）",
+          "update_interval": "上报间隔（秒）",
+          "speed_unit": "速度单位（跟 Traccar 那边的设置一致）",
+          "heartbeat": "位置不变时补报（心跳，会多出重合的轨迹点）",
+          "send_battery": "上报电量和充电状态",
+          "send_attrs": "附带点火状态和电压",
+          "battery_field": "电量字段名（留空自动识别）"
+        }
+      }
+    },
+    "error": {
+      "invalid_auth": "账号或密码不对",
+      "cannot_connect": "连不上途强，设备列表沿用原来的",
+      "no_devices": "这个账号下没有设备"
+    }
+  }
+}

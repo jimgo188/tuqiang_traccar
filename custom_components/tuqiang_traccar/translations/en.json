@@ -1,0 +1,85 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Choose platform",
+        "description": "Pick the Tuqiang site your account belongs to. Pick tuqiangol.com if you are not sure.",
+        "data": {
+          "platform": "Platform"
+        }
+      },
+      "auth": {
+        "title": "Sign in",
+        "description": "Sign in with the same account you use on the Tuqiang website. Read only, nothing is changed.",
+        "data": {
+          "username": "Account",
+          "password": "Password"
+        }
+      },
+      "device_select": {
+        "title": "Choose devices",
+        "description": "Tick the trackers you want forwarded to Traccar.",
+        "data": {
+          "devices": "Devices"
+        }
+      },
+      "traccar_config": {
+        "title": "Traccar server",
+        "description": "Enter the client endpoint of your Traccar server, for example http://192.168.1.10:5055. Port 5055, not the web port 8082. {count} device(s) selected.",
+        "data": {
+          "traccar_url": "Traccar URL (with port)",
+          "device_prefix": "Device id prefix (optional)",
+          "update_interval": "Update interval (seconds)",
+          "speed_unit": "Speed unit (match your Traccar setting)",
+          "heartbeat": "Send a heartbeat when nothing changes (adds overlapping points)",
+          "send_battery": "Send battery level and charging state",
+          "send_attrs": "Send ignition state and voltage",
+          "battery_field": "Battery field name (blank = auto)"
+        }
+      },
+      "reauth_confirm": {
+        "title": "Re-authenticate",
+        "description": "Sign in failed for {username}. Enter the current password.",
+        "data": {
+          "password": "Password"
+        }
+      }
+    },
+    "error": {
+      "invalid_auth": "Wrong account or password",
+      "cannot_connect": "Cannot reach Tuqiang right now",
+      "no_devices": "No devices on this account",
+      "no_device_selected": "Select at least one device",
+      "invalid_url": "The URL must start with http:// or https://",
+      "cannot_connect_traccar": "No answer from that address, check port 5055 and reachability",
+      "unknown": "Something unexpected happened, check the log"
+    },
+    "abort": {
+      "already_configured": "This account and server are already configured",
+      "reauth_successful": "Credentials updated"
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Options",
+        "description": "Changes reload the integration. The device list is fetched live from Tuqiang.",
+        "data": {
+          "devices": "Devices",
+          "device_prefix": "Device id prefix (optional)",
+          "update_interval": "Update interval (seconds)",
+          "speed_unit": "Speed unit (match your Traccar setting)",
+          "heartbeat": "Send a heartbeat when nothing changes (adds overlapping points)",
+          "send_battery": "Send battery level and charging state",
+          "send_attrs": "Send ignition state and voltage",
+          "battery_field": "Battery field name (blank = auto)"
+        }
+      }
+    },
+    "error": {
+      "invalid_auth": "Wrong account or password",
+      "cannot_connect": "Cannot reach Tuqiang, keeping the previous device list",
+      "no_devices": "No devices on this account"
+    }
+  }
+}

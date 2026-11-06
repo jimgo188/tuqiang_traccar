@@ -1,0 +1,13 @@
+{
+  "domain": "tuqiang_traccar",
+  "name": "途强转Traccar",
+  "codeowners": ["@jimgo188"],
+  "config_flow": true,
+  "dependencies": [],
+  "documentation": "https://github.com/jimgo188/tuqiang_traccar",
+  "integration_type": "service",
+  "iot_class": "cloud_polling",
+  "issue_tracker": "https://github.com/jimgo188/tuqiang_traccar/issues",
+  "requirements": [],
+  "version": "1.0.0"
+}
