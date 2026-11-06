@@ -142,7 +142,7 @@ class TuqiangTraccarConfigFlow(config_entries.ConfigFlow, domain=DOMAIN):
                 errors[CONF_DEVICES] = "no_device_selected"
             else:
                 await self._async_cleanup()
-                return await self.async_step_traccar_config(user_input[CONF_DEVICES])
+                return await self.async_step_traccar_config(selected=user_input[CONF_DEVICES])
 
         options = {imei: f"{name} · {imei}" for imei, name in self._devices.items()}
         return self.async_show_form(
